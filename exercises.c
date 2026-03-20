@@ -145,7 +145,39 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) {
+int parentesisBalanceados(char *cadena) 
+{
+   //USAR UNA PILA PARA GUARDAR LOS PARENTESIS ABIERTOS
+   //AL ENCONTRAR UN PAR DE CIERRE:
+   // VERIFICAR SI ESTA VACIA, SI NO, COOMPARAR CON EL TOP PILA
+   // SI SON IGUALES USAR UN POP AL TOP
+   // EN CASO DE NO SERLO O QUE ESTE VACIA LA PILA, LA CADENA ESTA DESBALANCEADA. 
+   //AL TERMINAR DE RECORRER SI LA PILA ESTA VACIA ESTA BALANCEADA, SI NO, ESTA DESBALANCEADA..
+
+   Stack* pila= create_stack();
+
+   for(int i = 0; cadena[i] != '\0';i++)
+      {
+         if(cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
+         {
+            push(pila,(void *)cadena[i]);
+         }
+         if(cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}')
+         {
+
+            if(top(pila) == NULL) return 0;
+            else
+            {
+               void* elemSup= top(pila);
+               if(*(char*)elemSup == cadena[i]) elemSup= pop(pila);
+               else return 0;
+            }
+         }
+      }
+   if(top(pila) == NULL) return 1;
+   else return 0;
+   
+   
    return 0;
 }
 
