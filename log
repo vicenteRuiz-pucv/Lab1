@@ -100,3 +100,26 @@ Fri Mar 20 12:25:24 PM UTC 2026:
  tests:  3|2
 total_score: 40/70
 e5c76e8
+Fri Mar 20 12:30:53 PM UTC 2026: 
+ exercises.c | 15 +++++++++------
+ 1 file changed, 9 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:127:32: error: expected ‘;’ before ‘push’
+  127 |          elementoSup1 = top(P2)
+      |                                ^
+      |                                ;
+  128 |          push(P1,elementoSup1);
+      |          ~~~~                   
+exercises.c:135:36: error: expected ‘;’ before ‘push’
+  135 |          elementoSup2= top(pilaAux)
+      |                                    ^
+      |                                    ;
+  136 |          push(P2,elementoSup2);
+      |          ~~~~                       
+exercises.c:124:10: error: variable ‘elementoSup1’ set but not used [-Werror=unused-but-set-variable]
+  124 |    void* elementoSup1;
+      |          ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+0ceda2f

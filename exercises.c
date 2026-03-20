@@ -111,25 +111,28 @@ void copia_pila(Stack* P1, Stack* P2)
    */
    Stack* pilaAux= create_stack();
 
-   void* elementoSup = top(P1);
-   while(elementoSup != NULL)
+   void* elementoSup;
+   while(top(P1) != NULL)
       {
          //PUSHEAMOS A AUXILIAR Y P2
+         elementoSup = top(P1);
          push(P2,elementoSup);
          push(pilaAux,elementoSup);
          elementoSup= pop(P1);
       }
    //VACIAMOS P2
-   void* elementoSup1 = top(P2);
-   while(elementoSup1 != NULL)
+   void* elementoSup1;
+   while(top(P2) != NULL)
       {
+         elementoSup1 = top(P2)
          push(P1,elementoSup1);
          elementoSup1= pop(P2);
       }
-   //VACIAMOS p_AUX
-   void* elementoSup2 = top(pilaAux);
+   //VACIAMOS pilaAuX
+   void* elementoSup2;
    while(elementoSup2 != NULL)
       {
+         elementoSup2= top(pilaAux)
          push(P2,elementoSup2);
          elementoSup2= pop(pilaAux);
       }
