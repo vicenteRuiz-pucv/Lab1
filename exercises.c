@@ -120,18 +120,18 @@ void copia_pila(Stack* P1, Stack* P2)
          elementoSup= pop(P1);
       }
    //VACIAMOS P2
-   elementoSup = top(P2);
-   while(elementoSup != NULL)
+   void* elementoSup1 = top(P2);
+   while(elementoSup1 != NULL)
       {
-         push(P1,elementoSup);
-         elementoSup= pop(P2);
+         push(P1,elementoSup1);
+         elementoSup1= pop(P2);
       }
    //VACIAMOS p_AUX
-   elementoSup = top(pilaAux);
-   while(elementoSup != NULL)
+   void* elementoSup2 = top(pilaAux);
+   while(elementoSup2 != NULL)
       {
-         push(P2,elementoSup);
-         elementoSup= pop(pilaAux);
+         push(P2,elementoSup2);
+         elementoSup2= pop(pilaAux);
       }
 }
 
