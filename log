@@ -59,3 +59,14 @@ exercises.c:89:33: note: ...this statement, but the latter is misleadingly inden
 exercises.c:89:33: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 c5ad12e
+Fri Mar 20 12:03:19 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:89:15: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+   89 |          if( ((int)actual) == elem)
+      |               ^
+cc1: all warnings being treated as errors
+a9c28a1
