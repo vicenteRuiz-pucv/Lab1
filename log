@@ -10,3 +10,17 @@ Fri Mar 20 03:26:14 AM UTC 2026:
  tests:  2|3
 total_score: 20/70
 7321fbf
+Fri Mar 20 12:01:20 PM UTC 2026: 
+ exercises.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:89:14: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+   89 |          if(*(int)actual == elem)
+      |              ^
+exercises.c:89:13: error: invalid type argument of unary ‘*’ (have ‘int’)
+   89 |          if(*(int)actual == elem)
+      |             ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+0dd1e2d
