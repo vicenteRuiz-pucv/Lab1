@@ -24,3 +24,17 @@ exercises.c:89:13: error: invalid type argument of unary ‘*’ (have ‘int’
       |             ^~~~~~~~~~~~
 cc1: all warnings being treated as errors
 0dd1e2d
+Fri Mar 20 12:01:59 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:89:15: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+   89 |          if(*((int)actual) == elem)
+      |               ^
+exercises.c:89:13: error: invalid type argument of unary ‘*’ (have ‘int’)
+   89 |          if(*((int)actual) == elem)
+      |             ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+9bc99a1
