@@ -101,7 +101,38 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack* P1, Stack* P2) {
+void copia_pila(Stack* P1, Stack* P2) 
+{
+   //PASAR LOS ELEMENTOS DE PILA 1 A PILA 2 EN BUEN ORDEN
+   /*
+   1. PASAR LA PILA 1 A LAS OTRAS DOS(QUEDAN INVERTIDAS) PILA 1 VACIA
+   2. LUEGO PASAMOS LO DE LA PILA 2 A LA PILA 1(QUEDA BIEN) 
+   3. MISMO PROCEDIMIENTO CON LA AUXILIAR A LA 2
+   */
+   Stack* pilaAux= createStack();
+
+   void* elementoSup = top(P1);
+   while(elementoSup != NULL)
+      {
+         //PUSHEAMOS A AUXILIAR Y P2
+         push(P2,elementoSup);
+         push(pilaAux,elementoSup);
+         elementoSup= pop(P1);
+      }
+   //VACIAMOS P2
+   elementoSup = top(P2);
+   while(elementoSup != NULL)
+      {
+         push(P1,elementoSup);
+         elementoSup= pop(P2);
+      }
+   //VACIAMOS p_AUX
+   elementoSup = top(pilaAux);
+   while(elementoSup != NULL)
+      {
+         push(P2,elementoSup);
+         elementoSup= pop(pilaAux);
+      }
 }
 
 /*
