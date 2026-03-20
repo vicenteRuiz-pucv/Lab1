@@ -130,7 +130,7 @@ void copia_pila(Stack* P1, Stack* P2)
       }
    //VACIAMOS pilaAuX
    void* elementoSup2;
-   while(elementoSup2 != NULL)
+   while(top(pilaAux) != NULL)
       {
          elementoSup2= top(pilaAux);
          push(P2,elementoSup2);

@@ -137,3 +137,9 @@ exercises.c:132:10: note: ‘elementoSup2’ was declared here
       |          ^~~~~~~~~~~~
 cc1: all warnings being treated as errors
 5dcfa6b
+Fri Mar 20 12:31:39 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+08853c4
