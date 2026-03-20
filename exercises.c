@@ -109,7 +109,7 @@ void copia_pila(Stack* P1, Stack* P2)
    2. LUEGO PASAMOS LO DE LA PILA 2 A LA PILA 1(QUEDA BIEN) 
    3. MISMO PROCEDIMIENTO CON LA AUXILIAR A LA 2
    */
-   Stack* pilaAux= createStack();
+   Stack* pilaAux= create_stack();
 
    void* elementoSup = top(P1);
    while(elementoSup != NULL)
