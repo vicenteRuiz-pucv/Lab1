@@ -123,3 +123,17 @@ exercises.c:124:10: error: variable ‘elementoSup1’ set but not used [-Werror
       |          ^~~~~~~~~~~~
 cc1: all warnings being treated as errors
 0ceda2f
+Fri Mar 20 12:31:15 PM UTC 2026: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘copia_pila’:
+exercises.c:133:23: error: ‘elementoSup2’ is used uninitialized [-Werror=uninitialized]
+  133 |    while(elementoSup2 != NULL)
+      |                       ^
+exercises.c:132:10: note: ‘elementoSup2’ was declared here
+  132 |    void* elementoSup2;
+      |          ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+5dcfa6b
