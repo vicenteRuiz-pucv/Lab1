@@ -166,19 +166,17 @@ int parentesisBalanceados(char *cadena)
          {
 
             if(top(pila) == NULL) return 0;
-            else
+            
+            char apertura= *(char *)top(pila);           
+            if((apertura == '(') && cadena[i] == ')' || (apertura == '[') && cadena[i] == ']' || (apertura == '{') && cadena[i] == '}')
             {
-               void* elemSup= top(pila);
-               if(*(char*)elemSup == cadena[i]) elemSup= pop(pila);
-               else return 0;
-            }
+               pop(pila);
+            }   
+            else return 0;
          }
       }
-   /*
-   if(top(pila) == NULL) return 1;
-   else return 0;
-   */
-   
+      
+   if(top(pila) != NULL) return 0;
    return 1;
 }
 
