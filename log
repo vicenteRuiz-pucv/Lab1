@@ -38,3 +38,24 @@ exercises.c:89:13: error: invalid type argument of unary ‘*’ (have ‘int’
       |             ^~~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 9bc99a1
+Fri Mar 20 12:02:20 PM UTC 2026: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘eliminaElementos’:
+exercises.c:89:13: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+   89 |          if((int)actual) == elem)
+      |             ^
+exercises.c:89:26: error: expected expression before ‘==’ token
+   89 |          if((int)actual) == elem)
+      |                          ^~
+exercises.c:89:10: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   89 |          if((int)actual) == elem)
+      |          ^~
+exercises.c:89:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   89 |          if((int)actual) == elem)
+      |                                 ^
+exercises.c:89:33: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+c5ad12e
